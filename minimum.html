@@ -1,0 +1,23 @@
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script><style>tr:nth-child(2n){background:#00FF66;}tr:nth-child(2n-1){background:#00FFFF;}msrittam
+{display:flex;user-select:none;}kumar{display:none;background:#CC00FF;padding:10px;border-radius:20px;margin-right:2px;}table{text-align:left;white-space:
+nowrap;}.come{background:#CC00FF;}input{border:initial;outline:initial;font:initial;font-weight:bold;font-size:16px;background:#00FFFF;height:19px;}</style>
+<msrittam><table><tr><th class=come2>student attendance</th></tr><tr><th class=come3>class timetable</th></tr>
+<tr><th class=come4>fee due details</th></tr><tr><th class=come5>indian temperature</th></tr></table>
+<kumar class=comp2><table><tr><th>sem</th><th>id</th><th>subject code</th><th>subject description</th></tr>
+<tr><th>one</th><th>mc</th><th>19ge0104</th><th>computer architecture and organisation</th></tr>
+<tr><th>one</th><th>mc</th><th>19ge0104</th><th>computer architecture and organisation</th></tr></table></kumar>
+<kumar class=comp3><table><tr><th>period</th><th>first</th><th>second</th><th>third</th><th>fourth</th><th>fifth</th></tr>
+<tr><th>monday</th><th>english</th><th>maths</th><th>german</th><th>material</th><th>environmental</th></tr>
+<tr><th>monday</th><th>english</th><th>maths</th><th>german</th><th>material</th><th>environmental</th></tr></table></kumar>
+<kumar class=comp4><table><tr><th>slno</th><th>fee head</th><th>due amount</th></tr>
+<tr><th>one</th><th>library and sports charges</th><th>five thousand only</th></tr><tr><th>one</th><th>
+library and sports charges</th><th>five thousand only</th></tr></table></kumar><kumar class=comp5><table class=box><tr><th><input></th></tr></table></kumar>
+<script>var pimage=[];$(".comp2").show();$(".come2").addClass("come");$("input").change(function(){$.getJSON("http://api.openweathermap.org/data/2.5/weather?zip="
++$("input").val()+",in&appid=7d35d1fae09a84e64c7219a41aaa13ee",function(a){if(pimage.indexOf($("input").val())<0&&pimage.length<2){pimage.push($("input").val());
+$(".box").append("<tr class=row><th><span>"+$("input").val()+"</span> haben "+Math.round(a.main.temp)+" kelvin</th></tr>");$("msrittam").append("<kumar class="
++$("input").val()+"><table><tr><th>pincode</th><th>"+$("input").val()+"</th></tr><tr><th>humidity</th><th>"+a.main.humidity+"</th></tr><tr><th>pressure</th><th>"
++a.main.pressure+"</th></tr></table></kumar>");}});});$(".box").on("click",".row",function(){$("kumar").hide();$("."+$(this).children("th").children("span").text()).show();
+$(".comp5").show();$("th").removeClass("come");});$(".come2").click(function(){$("kumar").hide();$(".comp2").show();$("th").removeClass("come");$(".come2").addClass("come");});
+$(".come3").click(function(){$("kumar").hide();$(".comp3").show();$("th").removeClass("come");$(".come3").addClass("come");});
+$(".come4").click(function(){$("kumar").hide();$(".comp4").show();$("th").removeClass("come");$(".come4").addClass("come");});
+$(".come5").click(function(){$("kumar").hide();$(".comp5").show();$("th").removeClass("come");$(".come5").addClass("come");});</script></msrittam>
